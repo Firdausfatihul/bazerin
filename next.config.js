@@ -3,6 +3,13 @@
  * for Docker builds.
  */
 import "./src/env.js";
+import withPWA from 'next-pwa';
+
+const nextConfig = withPWA({
+  dest: 'public',
+  register: true,
+  skipWaiting: true,
+});
 
 /** @type {import("next").NextConfig} */
 const config = {
@@ -20,4 +27,4 @@ const config = {
   transpilePackages: ["geist"],
 };
 
-export default config;
+export default nextConfig;
