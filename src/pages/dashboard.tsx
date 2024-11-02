@@ -9,14 +9,18 @@ export default function Dashboard() {
     flex-col 
     items-center 
     justify-start 
-    bg-white 
+    bg-gradient-to-br from-slate-50 to-slate-100
     p-4
     mx-4">
       <div className=" 
       max-w-md 
       rounded-lg 
-      bg-white 
-      shadow-md"
+      bg-white/80
+      backdrop-blur-sm
+      shadow-lg
+      transition-all
+      duration-300
+      hover:shadow-xl"
       >
         {/* top right icon */}
         <div className="relative">
@@ -26,14 +30,18 @@ export default function Dashboard() {
             h-10
             w-10
             rounded-md
-            bg-teal-600/20
+            bg-indigo-600/20 
             p-2
-            backdrop-blur-3xl"
+            backdrop-blur-3xl
+            transition-all
+            duration-300
+            hover:bg-indigo-600/30
+            hover:scale-105"
             aria-label="Menu"
             >
             <svg 
                 xmlns="http://www.w3.org/2000/svg" 
-                className="h-6 w-6 text-white" 
+                className="h-6 w-6 text-indigo-600" 
                 fill="none" 
                 viewBox="0 0 24 24" 
                 stroke="currentColor"
@@ -49,10 +57,15 @@ export default function Dashboard() {
         </div>
         <div className="mb-6 
         rounded-3xl 
-        bg-[#52c6c6] 
+        bg-gradient-to-br from-indigo-500 to-violet-500
         p-6 
         text-white 
-        shadow-md"
+        shadow-md
+        transition-all
+        duration-300
+        hover:shadow-lg
+        hover:from-indigo-600
+        hover:to-violet-600"
         >
           <h1 className="text-2xl 
           font-bold"
@@ -67,20 +80,28 @@ export default function Dashboard() {
           space-x-4"
           >
             <button className="rounded-md 
-            bg-white 
+            bg-white/90
             px-4 
             py-2 
-            text-teal-500 
-            hover:bg-gray-100"
+            text-indigo-500
+            transition-all
+            duration-300
+            hover:bg-white
+            hover:scale-105
+            hover:shadow-lg"
             >
               Check now
             </button>
             <button className="rounded-md 
-            bg-teal-600 
+            bg-violet-600/80
             px-4 
             py-2 
-            text-white 
-            hover:bg-teal-700"
+            text-white
+            transition-all
+            duration-300 
+            hover:bg-violet-600
+            hover:scale-105
+            hover:shadow-lg"
             >
               Remind me later
             </button>
@@ -89,11 +110,15 @@ export default function Dashboard() {
 
         <div className="mb-6 
         rounded-lg 
-        bg-gray-50 
+        bg-slate-50/80
+        backdrop-blur-sm
         p-4 
-        shadow-inner">
+        shadow-inner
+        transition-all
+        duration-300
+        hover:bg-slate-50">
           <p className="text-center 
-          text-gray-700"
+          text-slate-700"
           >
             Apakah kamu sudah siap belajar?
           </p>
@@ -105,11 +130,16 @@ export default function Dashboard() {
             items-center 
             space-x-2 
             rounded-md 
-            bg-blue-500 
+            bg-gradient-to-r from-emerald-500 to-teal-500
             px-4 
             py-2 
-            text-white 
-            hover:bg-blue-600"
+            text-white
+            transition-all
+            duration-300
+            hover:from-emerald-600
+            hover:to-teal-600
+            hover:scale-105
+            hover:shadow-lg"
             >
               <span>👍</span>
               <span>Yes, I did!</span>
@@ -118,11 +148,15 @@ export default function Dashboard() {
             items-center 
             space-x-2 
             rounded-md 
-            bg-gray-300 
+            bg-slate-200/80
+            backdrop-blur-sm
             px-4 
             py-2 
-            text-gray-700 
-            hover:bg-gray-400"
+            text-slate-700
+            transition-all
+            duration-300
+            hover:bg-slate-300
+            hover:scale-105"
             >
               <span>👎</span>
               <span>No, I didn't.</span>
@@ -137,19 +171,23 @@ export default function Dashboard() {
             items-center
             mb-4">
                 <h2 className="text-lg 
-                font-bold">
+                font-bold
+                text-slate-800">
                     My Courses list
                 </h2>
                 <div className="flex 
                 gap-2">
-                    <span className="text-gray-500">
+                    <span className="text-slate-500">
                         Weakness Subject only
                     </span>
                     <div className="w-12
                     h-6
-                    bg-gray-200
+                    bg-slate-200
                     rounded-full
-                    relative"
+                    relative
+                    transition-all
+                    duration-300
+                    hover:bg-slate-300"
                     >
                         <div className="absolute
                         right-1
@@ -157,7 +195,10 @@ export default function Dashboard() {
                         w-4
                         h-4
                         bg-white
-                        rounded-full">
+                        rounded-full
+                        transition-all
+                        duration-300
+                        hover:scale-110">
                         </div>
                     </div>
                 </div>
@@ -166,7 +207,7 @@ export default function Dashboard() {
 
             <p
             className="mb-4
-            text-gray-500">
+            text-slate-500">
                 Ayo persiapkan dirimu untuk belajar!
             </p>
 
@@ -174,11 +215,17 @@ export default function Dashboard() {
             grid-cols-2
             gap-4">
                 {/* first task */}
-                <div className="bg-teal-50
+                <div className="bg-gradient-to-br from-emerald-50 to-teal-50
                 p-4
                 rounded-xl
                 relative
-                overflow-hidden">
+                overflow-hidden
+                transition-all
+                duration-300
+                hover:from-emerald-100
+                hover:to-teal-100
+                hover:shadow-lg
+                group">
                     <div className="flex
                     justify-between
                     items-start">
@@ -189,7 +236,10 @@ export default function Dashboard() {
                             mb-2">
                                 <div className="relative
                                 w-12
-                                h-12">
+                                h-12
+                                transition-transform
+                                duration-300
+                                group-hover:scale-110">
                                     {/* loading circle */}
                                     <svg className="w-12
                                     h-12
@@ -207,14 +257,14 @@ export default function Dashboard() {
                                         cx="24"
                                         cy="24"
                                         r="20"
-                                        stroke="#0D9488"
+                                        stroke="#10B981"
                                         strokeWidth="4"
                                         fill="none"
                                         strokeDasharray="125.6"
                                         strokeDashoffset="23.864"
+                                        className="transition-all duration-300 group-hover:stroke-emerald-600"
                                         />
                                     </svg>
-                                    {/* automatically center */}
                                     <span className="absolute
                                     top-1/2
                                     left-1/2
@@ -222,21 +272,26 @@ export default function Dashboard() {
                                     -translate-x-1/2
                                     -translate-y-1/2
                                     text-sm
-                                    text-teal-600">
+                                    text-emerald-600
+                                    transition-colors
+                                    duration-300
+                                    group-hover:text-emerald-700">
                                         91%
                                     </span>
                                 </div>
                             </div>
                             <h3 className="font-semibold
-                            text-teal-600">
+                            text-emerald-600
+                            transition-colors
+                            duration-300
+                            group-hover:text-emerald-700">
                                 Medication
                             </h3>
                             <p className="text-sm
-                            text-gray-600">
+                            text-slate-600">
                                 6 Task
                             </p>
                         </div>
-                        {/* width as parent */}
                         <button className="absolute
                             bottom-2
                             right-2
@@ -247,7 +302,7 @@ export default function Dashboard() {
                             before:h-14
                             before:w-16
                             before:rounded-xl
-                            before:bg-teal-100"
+                            before:bg-emerald-100"
                             >
                             <svg className="absolute
                             top-2/3
@@ -257,7 +312,10 @@ export default function Dashboard() {
                             -translate-y-1/2
                             w-4
                             h-4
-                            text-teal-600"
+                            text-emerald-600
+                            transition-transform
+                            duration-300
+                            group-hover:translate-x-1"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor">
@@ -272,11 +330,17 @@ export default function Dashboard() {
 
                 {/* second task */}
 
-                <div className="bg-blue-50
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50
                 p-4
                 rounded-xl
                 relative
-                overflow-hidden">
+                overflow-hidden
+                transition-all
+                duration-300
+                hover:from-blue-100
+                hover:to-indigo-100
+                hover:shadow-lg
+                group">
                     <div className="flex
                     justify-between
                     items-start">
@@ -287,7 +351,10 @@ export default function Dashboard() {
                             mb-2">
                                 <div className="relative
                                 w-12
-                                h-12">
+                                h-12
+                                transition-transform
+                                duration-300
+                                group-hover:scale-110">
                                     {/* blue loading circle */}
                                     <svg className="w-12
                                     h-12
@@ -305,11 +372,12 @@ export default function Dashboard() {
                                             cx="24"
                                             cy="24"
                                             r="20"
-                                            stroke="#3B82F6"
+                                            stroke="#4F46E5"
                                             strokeWidth="4"
                                             fill="none"
                                             strokeDasharray="125.6"
                                             strokeDashoffset="23.864"
+                                            className="transition-all duration-300 group-hover:stroke-indigo-600"
                                         />
                                     </svg>
                                     <span className="absolute
@@ -319,16 +387,22 @@ export default function Dashboard() {
                                     -translate-x-1/2
                                     -translate-y-1/2
                                     text-sm
-                                    text-blue-600">
+                                    text-indigo-600
+                                    transition-colors
+                                    duration-300
+                                    group-hover:text-indigo-700">
                                         61%
                                     </span>
                                 </div>
                             </div>
                             <h3 className="font-semibold
-                            text-blue-600">
+                            text-indigo-600
+                            transition-colors
+                            duration-300
+                            group-hover:text-indigo-700">
                                 Fitness
                             </h3>
-                            <p className="text-start text-gray-600">
+                            <p className="text-start text-slate-600">
                                 6 Task
                             </p>
                         </div>
@@ -342,7 +416,7 @@ export default function Dashboard() {
                             before:h-14
                             before:w-16
                             before:rounded-xl
-                            before:bg-blue-100"
+                            before:bg-indigo-100"
                             >
                             <svg className="absolute
                             top-2/3
@@ -352,7 +426,10 @@ export default function Dashboard() {
                             -translate-y-1/2
                             w-4
                             h-4
-                            text-blue-600"
+                            text-indigo-600
+                            transition-transform
+                            duration-300
+                            group-hover:translate-x-1"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor">
@@ -367,11 +444,17 @@ export default function Dashboard() {
 
                 {/* third task */}
 
-                <div className="bg-orange-50
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50
                 p-4
                 rounded-xl
                 relative
-                overflow-hidden">
+                overflow-hidden
+                transition-all
+                duration-300
+                hover:from-amber-100
+                hover:to-orange-100
+                hover:shadow-lg
+                group">
                     <div className="flex
                     justify-between
                     items-start">
@@ -382,8 +465,11 @@ export default function Dashboard() {
                             mb-2">
                                 <div className="relative
                                 w-12
-                                h-12">
-                                    {/* blue loading circle */}
+                                h-12
+                                transition-transform
+                                duration-300
+                                group-hover:scale-110">
+                                    {/* orange loading circle */}
                                     <svg className="w-12
                                     h-12
                                     transform
@@ -405,6 +491,7 @@ export default function Dashboard() {
                                             fill="none"
                                             strokeDasharray="125.6"
                                             strokeDashoffset="23.864"
+                                            className="transition-all duration-300 group-hover:stroke-orange-600"
                                         />
                                     </svg>
                                     <span className="absolute
@@ -414,16 +501,22 @@ export default function Dashboard() {
                                     -translate-x-1/2
                                     -translate-y-1/2
                                     text-sm
-                                    text-orange-600">
+                                    text-orange-600
+                                    transition-colors
+                                    duration-300
+                                    group-hover:text-orange-700">
                                         21%
                                     </span>
                                 </div>
                             </div>
                             <h3 className="font-semibold
-                            text-orange-600">
+                            text-orange-600
+                            transition-colors
+                            duration-300
+                            group-hover:text-orange-700">
                                 Fitness
                             </h3>
-                            <p className="text-start text-gray-600">
+                            <p className="text-start text-slate-600">
                                 6 Task
                             </p>
                         </div>
@@ -447,7 +540,10 @@ export default function Dashboard() {
                             -translate-y-1/2
                             w-4
                             h-4
-                            text-orange-600"
+                            text-orange-600
+                            transition-transform
+                            duration-300
+                            group-hover:translate-x-1"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor">
@@ -462,11 +558,17 @@ export default function Dashboard() {
 
                 {/* fourth task */}
 
-                <div className="bg-red-50
+                <div className="bg-gradient-to-br from-rose-50 to-pink-50
                 p-4
                 rounded-xl
                 relative
-                overflow-hidden">
+                overflow-hidden
+                transition-all
+                duration-300
+                hover:from-rose-100
+                hover:to-pink-100
+                hover:shadow-lg
+                group">
                     <div className="flex
                     justify-between
                     items-start">
@@ -477,8 +579,11 @@ export default function Dashboard() {
                             mb-2">
                                 <div className="relative
                                 w-12
-                                h-12">
-                                    {/* blue loading circle */}
+                                h-12
+                                transition-transform
+                                duration-300
+                                group-hover:scale-110">
+                                    {/* rose loading circle */}
                                     <svg className="w-12
                                     h-12
                                     transform
@@ -495,11 +600,12 @@ export default function Dashboard() {
                                             cx="24"
                                             cy="24"
                                             r="20"
-                                            stroke="#EF4444"
+                                            stroke="#E11D48"
                                             strokeWidth="4"
                                             fill="none"
                                             strokeDasharray="125.6"
                                             strokeDashoffset="23.864"
+                                            className="transition-all duration-300 group-hover:stroke-rose-600"
                                         />
                                     </svg>
                                     <span className="absolute
@@ -509,16 +615,22 @@ export default function Dashboard() {
                                     -translate-x-1/2
                                     -translate-y-1/2
                                     text-sm
-                                    text-red-600">
+                                    text-rose-600
+                                    transition-colors
+                                    duration-300
+                                    group-hover:text-rose-700">
                                         51%
                                     </span>
                                 </div>
                             </div>
                             <h3 className="font-semibold
-                            text-red-600">
+                            text-rose-600
+                            transition-colors
+                            duration-300
+                            group-hover:text-rose-700">
                                 Fitness
                             </h3>
-                            <p className="text-start text-gray-600">
+                            <p className="text-start text-slate-600">
                                 6 Task
                             </p>
                         </div>
@@ -532,7 +644,7 @@ export default function Dashboard() {
                             before:h-14
                             before:w-16
                             before:rounded-xl
-                            before:bg-red-100"
+                            before:bg-rose-100"
                             >
                             <svg className="absolute
                             top-2/3
@@ -542,7 +654,10 @@ export default function Dashboard() {
                             -translate-y-1/2
                             w-4
                             h-4
-                            text-red-600"
+                            text-rose-600
+                            transition-transform
+                            duration-300
+                            group-hover:translate-x-1"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor">
