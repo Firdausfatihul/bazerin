@@ -9,8 +9,9 @@ export default function Dashboard() {
     flex-col 
     items-center 
     justify-start 
-    bg-gray-100 p-4">
-      <div className="w-full 
+    bg-white 
+    p-4">
+      <div className=" 
       max-w-md 
       rounded-lg 
       bg-white 
@@ -46,7 +47,7 @@ export default function Dashboard() {
             </button>
         </div>
         <div className="mb-6 
-        rounded-xl 
+        rounded-3xl 
         bg-[#52c6c6] 
         p-6 
         text-white 
@@ -129,58 +130,152 @@ export default function Dashboard() {
         </div>
 
         <div>
-          <h2 className="mb-4 
-          text-lg 
-          font-bold">Today's Tasks</h2>
-          <ul className="space-y-4">
-            <li className="flex 
-            items-center 
-            justify-between r
-            ounded-lg 
-            bg-blue-100 
-            p-4">
-              <div>
-                <p className="font-medium">Morning Walk</p>
-                <p className="text-sm 
-                text-gray-600"
-                >7:00 am - 7:30 am</p>
-              </div>
-              <input type="checkbox" className="h-5 
-              w-5" 
-              />
-            </li>
-            <li className="flex 
-            items-center 
-            justify-between 
-            rounded-lg 
-            bg-yellow-100 
-            p-4">
-              <div>
-                <p className="font-medium">Call grandchildren</p>
-                <p className="text-sm 
-                text-gray-600">11:00 am</p>
-              </div>
-              <input type="checkbox" className="h-5 
-              w-5" checked readOnly 
-              />
-            </li>
-            <li className="flex 
-            items-center 
-            justify-between 
-            rounded-lg 
-            bg-teal-100 
-            p-4">
-              <div>
-                <p className="font-medium">Check Blood Sugar Level</p>
-                <p className="text-sm 
-                text-gray-600">2:00 pm</p>
-              </div>
-              <input type="checkbox" className="h-5 
-              w-5" 
-              />
-            </li>
-          </ul>
+            <div>
+                <h2 className="">
+                    My Task
+                </h2>
+                <div>
+                    <span className="text-gray-500">
+                        Show Regularity
+                    </span>
+                    <div className="w-12
+                    h-6
+                    bg-gray-200
+                    rounded-full
+                    relative"
+                    >
+                        <div className="absolute
+                        right-1
+                        top-1
+                        w-4
+                        h-4
+                        bg-white
+                        rounded-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>Dorthy, you must</p>
+
+            <div className="grid
+            grid-cols-2
+            gap-4">
+                {/* first task */}
+                <div className="bg-teal-50">
+                    <div className="flex">
+                        <div>
+                            <div className="flex">
+                                <div className="relative">
+                                    {/* loading circle */}
+                                    <svg className="w-12
+                                    h-12
+                                    transform
+                                    -rotate-90">
+                                        <circle
+                                        cx="24"
+                                        cy="24"
+                                        r="20"
+                                        stroke="#E2E8F0"
+                                        strokeWidth="4"
+                                        fill="none"
+                                        />
+                                        <circle
+                                        cx="24"
+                                        cy="24"
+                                        r="20"
+                                        stroke="#0D9488"
+                                        strokeWidth="4"
+                                        fill="none"
+                                        strokeDasharray="125.6"
+                                        strokeDashoffset="23.864"
+                                        />
+                                    </svg>
+                                    <span>
+                                        91%
+                                    </span>
+                                </div>
+                                <h3>
+                                    Medication
+                                </h3>
+                                <p>6 Task</p>
+                            </div>
+                            <button>
+                                <svg className="w-4
+                                h-4
+                                text-teal-600"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                    <path strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                {/* second task */}
+
+                <div className="bg-teal-50">
+                    <div className="flex">
+                        <div>
+                            <div className="flex">
+                                <div className="relative">
+                                    {/* loading circle */}
+                                    <svg className="w-12
+                                    h-12
+                                    transform
+                                    -rotate-90">
+                                        <circle
+                                        cx="24"
+                                        cy="24"
+                                        r="20"
+                                        stroke="#E2E8F0"
+                                        strokeWidth="4"
+                                        fill="none"
+                                        />
+                                        <circle
+                                        cx="24"
+                                        cy="24"
+                                        r="20"
+                                        stroke="#0D9488"
+                                        strokeWidth="4"
+                                        fill="none"
+                                        strokeDasharray="125.6"
+                                        strokeDashoffset="23.864"
+                                        />
+                                    </svg>
+                                    <span>
+                                        91%
+                                    </span>
+                                </div>
+                                <h3>
+                                    Medication
+                                </h3>
+                                <p>6 Task</p>
+                            </div>
+                            <button>
+                                <svg className="w-4
+                                h-4
+                                text-teal-600"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                    <path strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        
       </div>
     </div>
   );
