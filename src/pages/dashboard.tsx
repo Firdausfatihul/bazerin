@@ -10,7 +10,8 @@ export default function Dashboard() {
     items-center 
     justify-start 
     bg-white 
-    p-4">
+    p-4
+    mx-4">
       <div className=" 
       max-w-md 
       rounded-lg 
@@ -55,11 +56,11 @@ export default function Dashboard() {
         >
           <h1 className="text-2xl 
           font-bold"
-          >Hello Dorthy</h1>
+          >Hello Daus</h1>
           <p className="text-lg">
-            It's time to check your blood sugar level.
+            Ayo kerjakan pre-test untuk mengetahui tingkat pengetahuan bahasa inggrismu.
           </p>
-          <p className="text-sm">Yesterday's reading: 130 mg/dl</p>
+          <p className="text-sm">Durasi : 10 menit</p>
           <div className="mt-4 
           flex 
           justify-center 
@@ -94,7 +95,7 @@ export default function Dashboard() {
           <p className="text-center 
           text-gray-700"
           >
-            Did you go for your morning walk today?
+            Apakah kamu sudah siap belajar?
           </p>
           <div className="mt-2 
           flex 
@@ -129,14 +130,20 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div>
-            <div>
-                <h2 className="">
-                    My Task
+        {/* add margin to right and left side */}
+        <div className="mx-4">
+            <div className="flex
+            justify-between
+            items-center
+            mb-4">
+                <h2 className="text-lg 
+                font-bold">
+                    My Courses list
                 </h2>
-                <div>
+                <div className="flex 
+                gap-2">
                     <span className="text-gray-500">
-                        Show Regularity
+                        Weakness Subject only
                     </span>
                     <div className="w-12
                     h-6
@@ -156,17 +163,33 @@ export default function Dashboard() {
                 </div>
             </div>
 
-            <p>Dorthy, you must</p>
+
+            <p
+            className="mb-4
+            text-gray-500">
+                Ayo persiapkan dirimu untuk belajar!
+            </p>
 
             <div className="grid
             grid-cols-2
             gap-4">
                 {/* first task */}
-                <div className="bg-teal-50">
-                    <div className="flex">
+                <div className="bg-teal-50
+                p-4
+                rounded-xl
+                relative
+                overflow-hidden">
+                    <div className="flex
+                    justify-between
+                    items-start">
                         <div>
-                            <div className="flex">
-                                <div className="relative">
+                            <div className="flex
+                            items-center
+                            gap-2
+                            mb-2">
+                                <div className="relative
+                                w-12
+                                h-12">
                                     {/* loading circle */}
                                     <svg className="w-12
                                     h-12
@@ -191,88 +214,347 @@ export default function Dashboard() {
                                         strokeDashoffset="23.864"
                                         />
                                     </svg>
-                                    <span>
+                                    {/* automatically center */}
+                                    <span className="absolute
+                                    top-1/2
+                                    left-1/2
+                                    transform
+                                    -translate-x-1/2
+                                    -translate-y-1/2
+                                    text-sm
+                                    text-teal-600">
                                         91%
                                     </span>
                                 </div>
-                                <h3>
-                                    Medication
-                                </h3>
-                                <p>6 Task</p>
                             </div>
-                            <button>
-                                <svg className="w-4
-                                h-4
-                                text-teal-600"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                    <path strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </button>
+                            <h3 className="font-semibold
+                            text-teal-600">
+                                Medication
+                            </h3>
+                            <p className="text-sm
+                            text-gray-600">
+                                6 Task
+                            </p>
                         </div>
+                        {/* width as parent */}
+                        <button className="absolute
+                            bottom-2
+                            right-2
+                            h-8
+                            w-12
+                            before:absolute
+                            before:inset-0
+                            before:h-14
+                            before:w-16
+                            before:rounded-xl
+                            before:bg-teal-100"
+                            >
+                            <svg className="absolute
+                            top-2/3
+                            left-2/4
+                            transform
+                            -translate-x-1/2
+                            -translate-y-1/2
+                            w-4
+                            h-4
+                            text-teal-600"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                                <path strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
 
                 {/* second task */}
 
-                <div className="bg-teal-50">
-                    <div className="flex">
+                <div className="bg-blue-50
+                p-4
+                rounded-xl
+                relative
+                overflow-hidden">
+                    <div className="flex
+                    justify-between
+                    items-start">
                         <div>
-                            <div className="flex">
-                                <div className="relative">
-                                    {/* loading circle */}
+                            <div className="flex
+                            items-center
+                            gap-2
+                            mb-2">
+                                <div className="relative
+                                w-12
+                                h-12">
+                                    {/* blue loading circle */}
                                     <svg className="w-12
                                     h-12
                                     transform
                                     -rotate-90">
                                         <circle
-                                        cx="24"
-                                        cy="24"
-                                        r="20"
-                                        stroke="#E2E8F0"
-                                        strokeWidth="4"
-                                        fill="none"
+                                            cx="24"
+                                            cy="24"
+                                            r="20"
+                                            stroke="#E2E8F0"
+                                            strokeWidth="4"
+                                            fill="none"
                                         />
                                         <circle
-                                        cx="24"
-                                        cy="24"
-                                        r="20"
-                                        stroke="#0D9488"
-                                        strokeWidth="4"
-                                        fill="none"
-                                        strokeDasharray="125.6"
-                                        strokeDashoffset="23.864"
+                                            cx="24"
+                                            cy="24"
+                                            r="20"
+                                            stroke="#3B82F6"
+                                            strokeWidth="4"
+                                            fill="none"
+                                            strokeDasharray="125.6"
+                                            strokeDashoffset="23.864"
                                         />
                                     </svg>
-                                    <span>
-                                        91%
+                                    <span className="absolute
+                                    top-1/2
+                                    left-1/2
+                                    transform
+                                    -translate-x-1/2
+                                    -translate-y-1/2
+                                    text-sm
+                                    text-blue-600">
+                                        61%
                                     </span>
                                 </div>
-                                <h3>
-                                    Medication
-                                </h3>
-                                <p>6 Task</p>
                             </div>
-                            <button>
-                                <svg className="w-4
-                                h-4
-                                text-teal-600"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                    <path strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </button>
+                            <h3 className="font-semibold
+                            text-blue-600">
+                                Fitness
+                            </h3>
+                            <p className="text-start text-gray-600">
+                                6 Task
+                            </p>
                         </div>
+                        <button className="absolute
+                            bottom-2
+                            right-2
+                            h-8
+                            w-12
+                            before:absolute
+                            before:inset-0
+                            before:h-14
+                            before:w-16
+                            before:rounded-xl
+                            before:bg-blue-100"
+                            >
+                            <svg className="absolute
+                            top-2/3
+                            left-2/4
+                            transform
+                            -translate-x-1/2
+                            -translate-y-1/2
+                            w-4
+                            h-4
+                            text-blue-600"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                                <path strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
+
+                {/* third task */}
+
+                <div className="bg-orange-50
+                p-4
+                rounded-xl
+                relative
+                overflow-hidden">
+                    <div className="flex
+                    justify-between
+                    items-start">
+                        <div>
+                            <div className="flex
+                            items-center
+                            gap-2
+                            mb-2">
+                                <div className="relative
+                                w-12
+                                h-12">
+                                    {/* blue loading circle */}
+                                    <svg className="w-12
+                                    h-12
+                                    transform
+                                    -rotate-90">
+                                        <circle
+                                            cx="24"
+                                            cy="24"
+                                            r="20"
+                                            stroke="#E2E8F0"
+                                            strokeWidth="4"
+                                            fill="none"
+                                        />
+                                        <circle
+                                            cx="24"
+                                            cy="24"
+                                            r="20"
+                                            stroke="#F97316"
+                                            strokeWidth="4"
+                                            fill="none"
+                                            strokeDasharray="125.6"
+                                            strokeDashoffset="23.864"
+                                        />
+                                    </svg>
+                                    <span className="absolute
+                                    top-1/2
+                                    left-1/2
+                                    transform
+                                    -translate-x-1/2
+                                    -translate-y-1/2
+                                    text-sm
+                                    text-orange-600">
+                                        21%
+                                    </span>
+                                </div>
+                            </div>
+                            <h3 className="font-semibold
+                            text-orange-600">
+                                Fitness
+                            </h3>
+                            <p className="text-start text-gray-600">
+                                6 Task
+                            </p>
+                        </div>
+                        <button className="absolute
+                            bottom-2
+                            right-2
+                            h-8
+                            w-12
+                            before:absolute
+                            before:inset-0
+                            before:h-14
+                            before:w-16
+                            before:rounded-xl
+                            before:bg-orange-100"
+                            >
+                            <svg className="absolute
+                            top-2/3
+                            left-2/4
+                            transform
+                            -translate-x-1/2
+                            -translate-y-1/2
+                            w-4
+                            h-4
+                            text-orange-600"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                                <path strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                {/* fourth task */}
+
+                <div className="bg-red-50
+                p-4
+                rounded-xl
+                relative
+                overflow-hidden">
+                    <div className="flex
+                    justify-between
+                    items-start">
+                        <div>
+                            <div className="flex
+                            items-center
+                            gap-2
+                            mb-2">
+                                <div className="relative
+                                w-12
+                                h-12">
+                                    {/* blue loading circle */}
+                                    <svg className="w-12
+                                    h-12
+                                    transform
+                                    -rotate-90">
+                                        <circle
+                                            cx="24"
+                                            cy="24"
+                                            r="20"
+                                            stroke="#E2E8F0"
+                                            strokeWidth="4"
+                                            fill="none"
+                                        />
+                                        <circle
+                                            cx="24"
+                                            cy="24"
+                                            r="20"
+                                            stroke="#EF4444"
+                                            strokeWidth="4"
+                                            fill="none"
+                                            strokeDasharray="125.6"
+                                            strokeDashoffset="23.864"
+                                        />
+                                    </svg>
+                                    <span className="absolute
+                                    top-1/2
+                                    left-1/2
+                                    transform
+                                    -translate-x-1/2
+                                    -translate-y-1/2
+                                    text-sm
+                                    text-red-600">
+                                        51%
+                                    </span>
+                                </div>
+                            </div>
+                            <h3 className="font-semibold
+                            text-red-600">
+                                Fitness
+                            </h3>
+                            <p className="text-start text-gray-600">
+                                6 Task
+                            </p>
+                        </div>
+                        <button className="absolute
+                            bottom-2
+                            right-2
+                            h-8
+                            w-12
+                            before:absolute
+                            before:inset-0
+                            before:h-14
+                            before:w-16
+                            before:rounded-xl
+                            before:bg-red-100"
+                            >
+                            <svg className="absolute
+                            top-2/3
+                            left-2/4
+                            transform
+                            -translate-x-1/2
+                            -translate-y-1/2
+                            w-4
+                            h-4
+                            text-red-600"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                                <path strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
             </div>
         </div>
         
