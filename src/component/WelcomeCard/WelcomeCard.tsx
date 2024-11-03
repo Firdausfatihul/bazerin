@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
+import ButtonBasic from "../Button/ButtonBasic";
 
 const WelcomeCard: React.FC = () => {
     const router = useRouter();
@@ -26,36 +27,22 @@ const WelcomeCard: React.FC = () => {
             justify-center 
             space-x-4"
           >
-            <button 
+            <ButtonBasic
+              ariaLabel="Become a Worker"
               onClick={() => router.push('/become-worker')}
-              className="rounded-md 
-                bg-white/90
-                px-4 
-                py-2 
-                text-emerald-600
-                transition-all
-                duration-300
-                hover:bg-white
-                hover:scale-105
-                hover:shadow-lg"
+              variant="white"
+              size="sm"
             >
               Become a Worker
-            </button>
-            <button 
+            </ButtonBasic>
+            <ButtonBasic
+              ariaLabel="Purchase Comments"
+              size="sm"
               onClick={() => router.push('/purchase-comments')}
-              className="rounded-md 
-                bg-teal-600/80
-                px-4 
-                py-2 
-                text-white
-                transition-all
-                duration-300 
-                hover:bg-teal-700
-                hover:scale-105
-                hover:shadow-lg"
+              variant="teal"
             >
               Purchase Comments
-            </button>
+            </ButtonBasic>
           </div>
         </div>
     );
