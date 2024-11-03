@@ -44,33 +44,29 @@ export default function Dashboard() {
   const router = useRouter();
   return (
     <div className="flex 
-      min-h-screen 
       flex-col 
       items-center 
-      justify-start 
-      bg-gradient-to-br from-slate-50 to-slate-100
+      bg-gradient-to-br 
+      from-slate-50 
+      to-slate-100
       p-4
       mx-4">
       <div className=" 
         max-w-md 
         rounded-lg 
         bg-white/80
-        backdrop-blur-sm
-        shadow-lg
-        transition-all
-        duration-300
-        hover:shadow-xl"
+        shadow-lg"
       >
         {/* top right icon */}
         <div className="relative">
           <button className="relative 
               top-6
-              right-4
-              h-10
-              w-10
+              right-6
+              h-14
+              w-14
               rounded-md
               bg-indigo-600/20 
-              p-2
+              p-4
               backdrop-blur-3xl
               transition-all
               duration-300
@@ -96,15 +92,17 @@ export default function Dashboard() {
         </div>
         <div className="mb-6 
           rounded-3xl 
-          bg-gradient-to-br from-indigo-500 to-violet-500
+          bg-gradient-to-br 
+          from-emerald-500 
+          to-teal-500
           p-6 
           text-white 
           shadow-md
           transition-all
           duration-300
           hover:shadow-lg
-          hover:from-indigo-600
-          hover:to-violet-600"
+          hover:from-emerald-600
+          hover:to-teal-600"
         >
           <h1 className="text-2xl 
             font-bold"
@@ -123,7 +121,7 @@ export default function Dashboard() {
                 bg-white/90
                 px-4 
                 py-2 
-                text-indigo-500
+                text-emerald-500
                 transition-all
                 duration-300
                 hover:bg-white
@@ -135,13 +133,13 @@ export default function Dashboard() {
             <button 
               onClick={() => router.push('/purchase-comments')}
               className="rounded-md 
-                bg-violet-600/80
+                bg-teal-600/80
                 px-4 
                 py-2 
                 text-white
                 transition-all
                 duration-300 
-                hover:bg-violet-600
+                hover:bg-teal-600
                 hover:scale-105
                 hover:shadow-lg"
             >
@@ -151,60 +149,71 @@ export default function Dashboard() {
         </div>
 
         <div className="mb-6 
-          rounded-lg 
-          bg-slate-50/80
-          backdrop-blur-sm
-          p-4 
-          shadow-inner
+          mx-6
+          rounded-[24px]
+          bg-slate-50/90
+          backdrop-blur-md
+          p-6
+          shadow-[inset_0_2px_8px_rgba(0,0,0,0.06)]
           transition-all
-          duration-300
+          duration-500
+          ease-[cubic-bezier(0.34,1.56,0.64,1)]
           hover:bg-slate-50">
           <p className="text-center 
-            text-slate-700"
+            text-slate-700
+            font-medium"
           >
             Are you ready to boost your Instagram engagement?
           </p>
-          <div className="mt-2 
+          <div className="mt-4
             flex 
             justify-center 
-            space-x-4">
+            gap-4">
             <button 
               onClick={() => router.push('/start-earning')}
               className="flex 
                 items-center 
-                space-x-2 
-                rounded-md 
+                gap-2
+                rounded-2xl
                 bg-gradient-to-r from-emerald-500 to-teal-500
-                px-4 
-                py-2 
+                px-6
+                py-3
                 text-white
+                font-medium
                 transition-all
-                duration-300
+                duration-500
+                ease-[cubic-bezier(0.34,1.56,0.64,1)]
                 hover:from-emerald-600
                 hover:to-teal-600
                 hover:scale-105
-                hover:shadow-lg"
+                hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)]
+                hover:rotate-1
+                group"
             >
-              <span>👍</span>
+              <span className="transition-transform duration-500 group-hover:scale-110">👍</span>
               <span>Yes, Let's Go!</span>
             </button>
             <button 
               onClick={() => router.push('/learn-more')}
               className="flex 
                 items-center 
-                space-x-2 
-                rounded-md 
-                bg-slate-200/80
-                backdrop-blur-sm
-                px-4 
-                py-2 
+                gap-2
+                rounded-2xl
+                bg-slate-200/90
+                backdrop-blur-md
+                px-6
+                py-3
                 text-slate-700
+                font-medium
                 transition-all
-                duration-300
+                duration-500
+                ease-[cubic-bezier(0.34,1.56,0.64,1)]
                 hover:bg-slate-300
-                hover:scale-105"
+                hover:scale-105
+                hover:rotate-1
+                group"
             >
-              <span>👎</span>
+              <span className="transition-transform duration-500 group-hover:scale-110">👎</span>
               <span>Not Now</span>
             </button>
           </div>
