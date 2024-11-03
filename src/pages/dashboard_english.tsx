@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
-    
+import { deflate } from "zlib";
+
 export default function Dashboard() {
   const router = useRouter();
   return (
@@ -68,18 +69,17 @@ export default function Dashboard() {
         >
           <h1 className="text-2xl 
           font-bold"
-          >Welcome to Buzerin</h1>
+          >Hello Daus</h1>
           <p className="text-lg">
-            Earn money by commenting on Instagram posts or purchase comments for your corporate accounts.
+            Ayo kerjakan pre-test untuk mengetahui tingkat pengetahuan bahasa inggrismu.
           </p>
+          <p className="text-sm">Durasi : 10 menit</p>
           <div className="mt-4 
           flex 
           justify-center 
           space-x-4"
           >
-            <button 
-              onClick={() => router.push('/become-worker')}
-              className="rounded-md 
+            <button className="rounded-md 
             bg-white/90
             px-4 
             py-2 
@@ -90,11 +90,9 @@ export default function Dashboard() {
             hover:scale-105
             hover:shadow-lg"
             >
-              Become a Worker
+              Check now
             </button>
-            <button 
-              onClick={() => router.push('/purchase-comments')}
-              className="rounded-md 
+            <button className="rounded-md 
             bg-violet-600/80
             px-4 
             py-2 
@@ -105,7 +103,7 @@ export default function Dashboard() {
             hover:scale-105
             hover:shadow-lg"
             >
-              Purchase Comments
+              Remind me later
             </button>
           </div>
         </div>
@@ -122,15 +120,13 @@ export default function Dashboard() {
           <p className="text-center 
           text-slate-700"
           >
-            Are you ready to boost your Instagram engagement?
+            Apakah kamu sudah siap belajar?
           </p>
           <div className="mt-2 
           flex 
           justify-center 
           space-x-4">
-            <button 
-              onClick={() => router.push('/start-earning')}
-              className="flex 
+            <button className="flex 
             items-center 
             space-x-2 
             rounded-md 
@@ -146,11 +142,9 @@ export default function Dashboard() {
             hover:shadow-lg"
             >
               <span>👍</span>
-              <span>Yes, Let's Go!</span>
+              <span>Yes, I did!</span>
             </button>
-            <button 
-              onClick={() => router.push('/learn-more')}
-              className="flex 
+            <button className="flex 
             items-center 
             space-x-2 
             rounded-md 
@@ -165,7 +159,7 @@ export default function Dashboard() {
             hover:scale-105"
             >
               <span>👎</span>
-              <span>Not Now</span>
+              <span>No, I didn't.</span>
             </button>
           </div>
         </div>
@@ -179,12 +173,12 @@ export default function Dashboard() {
                 <h2 className="text-lg 
                 font-bold
                 text-slate-800">
-                    Available Tasks
+                    My Courses list
                 </h2>
                 <div className="flex 
                 gap-2">
                     <span className="text-slate-500">
-                        Filter: Active Tasks
+                        Weakness Subject only
                     </span>
                     <div className="w-12
                     h-6
@@ -214,7 +208,7 @@ export default function Dashboard() {
             <p
             className="mb-4
             text-slate-500">
-                Start earning by completing tasks or enhancing your posts with purchased comments!
+                Ayo persiapkan dirimu untuk belajar!
             </p>
 
             <div className="grid
@@ -271,7 +265,19 @@ export default function Dashboard() {
                                         className="transition-all duration-300 group-hover:stroke-emerald-600"
                                         />
                                     </svg>
-                                    {/* Removed percentage span */}
+                                    <span className="absolute
+                                    top-1/2
+                                    left-1/2
+                                    transform
+                                    -translate-x-1/2
+                                    -translate-y-1/2
+                                    text-sm
+                                    text-emerald-600
+                                    transition-colors
+                                    duration-300
+                                    group-hover:text-emerald-700">
+                                        91%
+                                    </span>
                                 </div>
                             </div>
                             <h3 className="font-semibold
@@ -279,16 +285,14 @@ export default function Dashboard() {
                             transition-colors
                             duration-300
                             group-hover:text-emerald-700">
-                                Sell Comments on Posts
+                                Medication
                             </h3>
                             <p className="text-sm
                             text-slate-600">
-                                6 Posts Available
+                                6 Task
                             </p>
                         </div>
-                        <button 
-                          onClick={() => router.push('/task/comment-posts')}
-                          className="absolute
+                        <button className="absolute
                             bottom-2
                             right-2
                             h-8
@@ -376,7 +380,19 @@ export default function Dashboard() {
                                             className="transition-all duration-300 group-hover:stroke-indigo-600"
                                         />
                                     </svg>
-                                    {/* Removed percentage span */}
+                                    <span className="absolute
+                                    top-1/2
+                                    left-1/2
+                                    transform
+                                    -translate-x-1/2
+                                    -translate-y-1/2
+                                    text-sm
+                                    text-indigo-600
+                                    transition-colors
+                                    duration-300
+                                    group-hover:text-indigo-700">
+                                        61%
+                                    </span>
                                 </div>
                             </div>
                             <h3 className="font-semibold
@@ -384,15 +400,13 @@ export default function Dashboard() {
                             transition-colors
                             duration-300
                             group-hover:text-indigo-700">
-                                Buy Comments for Posts
+                                Fitness
                             </h3>
                             <p className="text-start text-slate-600">
-                                4 Packages Available
+                                6 Task
                             </p>
                         </div>
-                        <button 
-                          onClick={() => router.push('/purchase-comments')}
-                          className="absolute
+                        <button className="absolute
                             bottom-2
                             right-2
                             h-8
@@ -480,7 +494,19 @@ export default function Dashboard() {
                                             className="transition-all duration-300 group-hover:stroke-orange-600"
                                         />
                                     </svg>
-                                    {/* Removed percentage span */}
+                                    <span className="absolute
+                                    top-1/2
+                                    left-1/2
+                                    transform
+                                    -translate-x-1/2
+                                    -translate-y-1/2
+                                    text-sm
+                                    text-orange-600
+                                    transition-colors
+                                    duration-300
+                                    group-hover:text-orange-700">
+                                        21%
+                                    </span>
                                 </div>
                             </div>
                             <h3 className="font-semibold
@@ -488,15 +514,13 @@ export default function Dashboard() {
                             transition-colors
                             duration-300
                             group-hover:text-orange-700">
-                                Engage with Followers
+                                Fitness
                             </h3>
                             <p className="text-start text-slate-600">
-                                3 Tasks Available
+                                6 Task
                             </p>
                         </div>
-                        <button 
-                          onClick={() => router.push('/task/engage-followers')}
-                          className="absolute
+                        <button className="absolute
                             bottom-2
                             right-2
                             h-8
@@ -584,7 +608,19 @@ export default function Dashboard() {
                                             className="transition-all duration-300 group-hover:stroke-rose-600"
                                         />
                                     </svg>
-                                    {/* Removed percentage span */}
+                                    <span className="absolute
+                                    top-1/2
+                                    left-1/2
+                                    transform
+                                    -translate-x-1/2
+                                    -translate-y-1/2
+                                    text-sm
+                                    text-rose-600
+                                    transition-colors
+                                    duration-300
+                                    group-hover:text-rose-700">
+                                        51%
+                                    </span>
                                 </div>
                             </div>
                             <h3 className="font-semibold
@@ -592,15 +628,13 @@ export default function Dashboard() {
                             transition-colors
                             duration-300
                             group-hover:text-rose-700">
-                                Manage Your Profile
+                                Fitness
                             </h3>
                             <p className="text-start text-slate-600">
-                                2 Tasks Available
+                                6 Task
                             </p>
                         </div>
-                        <button 
-                          onClick={() => router.push('/task/manage-profile')}
-                          className="absolute
+                        <button className="absolute
                             bottom-2
                             right-2
                             h-8
