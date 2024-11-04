@@ -4,41 +4,43 @@ import FilterTogle from "~/component/FilterTogle/FilterTogle";
 
 const TASKITEM = [
     {
+        color: 'rose',
+        icon: '📝',
+        title: 'Jasa Isi Kuisioner',
+        content: '2 Paket: Formulir only dan Video',
+        route: '/task/survey',
+        gradientFrom: 'from-rose-50',
+        gradientTo: 'to-pink-50',
+    },
+    {
+      color: 'orange',
+      icon: '💬',
+      title: 'Jasa Komentar Sosmed',
+      content: '3 Paket Tersedia (FB, IG, TW)',
+      route: '/purchase-social-comments',
+      gradientFrom: 'from-amber-50',
+      gradientTo: 'to-orange-50',
+    },
+    {
         color: 'emerald',
         icon: '👍',
-        title: 'Sell Comments on Posts',
-        content: '6 Posts Available',
+        title: 'Jasa Like & Subscribe',
+        content: '0 Paket Tersedia',
         route: '/task/comment-posts',
         gradientFrom: 'from-emerald-50',
         gradientTo: 'to-teal-50',
     },
     {
         color: 'indigo',
-        icon: '👎',
-        title: 'Buy Comments for Posts',
-        content: '4 Packages Available',
-        route: '/purchase-comments',
+        icon: '⭐',
+        title: 'Jasa Review',
+        content: '8 Produk Tersedia ( Rating Gmaps, Rating Toko, Ulasan Shopee/Ecommerce)',
+        route: '/task/product-review',
         gradientFrom: 'from-blue-50',
         gradientTo: 'to-indigo-50',
     },
-    {
-        color: 'orange',
-        icon: '👀',
-        title: 'Engage with Followers',
-        content: '3 Tasks Available',
-        route: '/task/engage-followers',
-        gradientFrom: 'from-amber-50',
-        gradientTo: 'to-orange-50',
-    },
-    {
-        color: 'rose',
-        icon: '💔',
-        title: 'Engage with Followers',
-        content: '3 Tasks Available',
-        route: '/task/engage-followers',
-        gradientFrom: 'from-rose-50',
-        gradientTo: 'to-pink-50',
-    },
+    
+    
 ]
 
 const AvailableCard: React.FC = () => {
@@ -52,7 +54,7 @@ const AvailableCard: React.FC = () => {
             <h2 className="text-lg 
               font-bold
               text-slate-800">
-              Available Tasks
+              Jasa yang tersedia
             </h2>
             <div className="flex 
               gap-2">

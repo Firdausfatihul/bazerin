@@ -18,7 +18,7 @@ const WelcomeCard: React.FC = () => {
         >
           <h1 className="text-2xl 
             font-bold"
-          >Welcome to Buzerin</h1>
+          >Mau Upgrade Bisnismu?</h1>
           <p className="text-lg">
             Earn money by commenting on Instagram posts or purchase comments for your corporate accounts.
           </p>

@@ -2,6 +2,7 @@ import MenuButton from "~/component/MenuButton/MenuButton";
 import WelcomeCard from "~/component/WelcomeCard/WelcomeCard";
 import TestimonyCard from "~/component/TestimonyCard/TestimonyCard";
 import AvailableCard from "~/component/AvailableCard/AvailableCard";
+import StatisticsCard from "~/component/StatisticsCard/StatisticsCard";
 
 export default function Dashboard() {
   return (
@@ -26,6 +27,7 @@ export default function Dashboard() {
         <WelcomeCard />
         <TestimonyCard />
         <AvailableCard />
+        <StatisticsCard />
       </div>
     </div>
   );
