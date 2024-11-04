@@ -1,0 +1,26 @@
+<ButtonBasic
+              onClick={() => router.push('/learn-more')}
+              variant="gradient"
+              className="scale-100 
+              hover:scale-105 
+              hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] 
+              hover:rotate-1"
+              rounded="lg"
+              ariaLabel="Yes, Let's Go!"
+            >
+              <span>👎</span>
+              <span>Yes, Let's Go!</span>
+            </ButtonBasic>
+            <ButtonBasic
+              onClick={() => router.push('/learn-more')}
+              variant="slate"
+              className="scale-100 
+              hover:scale-105 
+              hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] 
+              hover:rotate-1"
+              rounded="lg"
+              ariaLabel="Yes, Let's Go!"
+            >
+              <span className="transition-transform duration-500 group-hover:scale-110">👎</span>
+              <span>Not Now</span>
+            </ButtonBasic>

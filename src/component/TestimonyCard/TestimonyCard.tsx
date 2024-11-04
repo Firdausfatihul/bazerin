@@ -1,10 +1,39 @@
 import React from "react";
 import { useRouter } from "next/router";
 import AchievementsCard from "~/component/AchievementsCard/AchievementsCard";
-import ButtonBasic from "~/component/Button/ButtonBasic";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 const TestimonyCard: React.FC = () => {
-    const router = useRouter();
+
+  // sample data for testimony, temorrow pickup from api
+  const data = [
+    {
+      color: "yellow",
+      photoProfile: "https://via.placeholder.com/150",
+      name: "John Doe",
+      content: "aas",
+      date: "2024-01-01"
+    },
+    {
+      color: "green",
+      photoProfile: "https://via.placeholder.com/150",
+      name: "Jane Doe",
+      content: "aa",
+      date: "2024-01-01"
+    },
+    {
+      color: "blue",
+      photoProfile: "https://via.placeholder.com/150",
+      name: "Jim Doe",
+      content: "aa",
+      date: "2024-01-01"
+    }
+  ]
     return (
         <div className="mb-6 
           mx-6
@@ -28,33 +57,25 @@ const TestimonyCard: React.FC = () => {
             flex 
             justify-center 
             gap-4">
-
-            <ButtonBasic
-              onClick={() => router.push('/learn-more')}
-              variant="gradient"
-              className="scale-100 
-              hover:scale-105 
-              hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] 
-              hover:rotate-1"
-              rounded="lg"
-              ariaLabel="Yes, Let's Go!"
+            <Swiper 
+              loop={true}
+              direction="horizontal"
+              slidesPerView={1.2}
+              centeredSlides={true}
+              spaceBetween={0}
+              navigation = {{
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              }}
+              modules={[Navigation, Pagination, Scrollbar, A11y]}
+              scrollbar={{ draggable: true }}
             >
-              <span>👎</span>
-              <span>Yes, Let's Go!</span>
-            </ButtonBasic>
-            <ButtonBasic
-              onClick={() => router.push('/learn-more')}
-              variant="slate"
-              className="scale-100 
-              hover:scale-105 
-              hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] 
-              hover:rotate-1"
-              rounded="lg"
-              ariaLabel="Yes, Let's Go!"
-            >
-              <span className="transition-transform duration-500 group-hover:scale-110">👎</span>
-              <span>Not Now</span>
-            </ButtonBasic>
+            {data.map((item, index) => (
+              <SwiperSlide key={index}>
+                <AchievementsCard {...item} />
+              </SwiperSlide>
+            ))}
+            </Swiper>
           </div>
         </div>
     );
