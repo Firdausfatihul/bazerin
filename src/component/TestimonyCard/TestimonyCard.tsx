@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 
 const TestimonyCard: React.FC = () => {
 
@@ -54,14 +54,17 @@ const TestimonyCard: React.FC = () => {
           </p>
           <div>
             <Swiper 
+              modules={[Navigation, Pagination, A11y, Autoplay]}
+              autoplay={{
+                delay: 1500,
+                disableOnInteraction: false,
+              }}
               loop={true}
               direction="horizontal"
               slidesPerView={1.2}
               centeredSlides={true}
               spaceBetween={0}
               initialSlide={2}
-              modules={[Navigation, Pagination, Scrollbar, A11y]}
-              scrollbar={{ draggable: true }}
             >
             {data.map((item, index) => (
               <SwiperSlide key={index}>

@@ -12,8 +12,10 @@ export default function Dashboard() {
       from-slate-50 
       to-slate-100
       p-4
+      w-full
       mx-4">
       <div className=" 
+        w-full
         max-w-md 
         rounded-lg 
         bg-white/80
