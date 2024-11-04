@@ -67,7 +67,7 @@ const sizeClasses: { [key in NonNullable<ButtonBasicProps["size"]>]: string } = 
 const ButtonBasic: React.FC<ButtonBasicProps> = ({
   onClick,
   children,
-  variant = "primary",
+  variant = "gradient",
   className = "",
   size = "md",
   rounded = "md",
