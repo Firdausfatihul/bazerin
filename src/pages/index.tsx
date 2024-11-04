@@ -9,7 +9,7 @@ export default function Home() {
   const hello = api.post.hello.useQuery({ text: "from tRPC" });
 
   useEffect(() => {
-    router.push("/login");
+    router.push("/dashboard");
   }, [router]);
 
   return null;

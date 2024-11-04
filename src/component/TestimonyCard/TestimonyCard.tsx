@@ -35,38 +35,31 @@ const TestimonyCard: React.FC = () => {
     }
   ]
     return (
-        <div className="mb-6 
+        <div className="mb-6
           mx-6
           rounded-[24px]
           bg-slate-50/90
           backdrop-blur-md
-          p-6
           shadow-[inset_0_2px_8px_rgba(0,0,0,0.06)]
           transition-all
           duration-500
           ease-[cubic-bezier(0.34,1.56,0.64,1)]
-          hover:bg-slate-50
-          overflow-hidden">
+          hover:bg-slate-50">
           <p className="text-center 
             text-slate-700
-            font-medium"
+            font-medium
+            pt-4"
           >
             Testimony
           </p>
-          <div className="mt-4
-            flex 
-            justify-center 
-            gap-4">
+          <div>
             <Swiper 
               loop={true}
               direction="horizontal"
               slidesPerView={1.2}
               centeredSlides={true}
               spaceBetween={0}
-              navigation = {{
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-              }}
+              initialSlide={2}
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               scrollbar={{ draggable: true }}
             >
